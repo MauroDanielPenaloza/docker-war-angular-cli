@@ -1,0 +1,8 @@
+version: '3'
+services:
+  build-samm:
+    build: .
+    volumes: 
+      - ./front-web:/usr/src/front
+    command: bash -c "cp -r /usr/src/webapp/. /usr/src/front/src/main/webapp/ && mvn clean install"
+      
